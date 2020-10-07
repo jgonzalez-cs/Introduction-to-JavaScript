@@ -12,23 +12,32 @@ returns a value, that value will be logged to the console.  An example of this w
 Task 1a - Voting Age
 
 Do the following:   
-   1. Make a variable called votingAge and give it a value
-   2. Return true if age is 18 or higher
-
-   HINT: no function required
+   1. Make a variable called votingAge and give it a value */
+const votingAge = 18;
+ /*  2. Return true if age is 18 or higher */
+if(votingAge >= 18) {
+    console.log(true)
+} else {
+    console.log(false)
+}
+  /* HINT: no function required
 */
-
 
 
 /*
 Task 1b - Values
 
 Do the following:   
-   1. Declare two variables and assign them values
-   2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
-   3. Return the new value of the 1st variable
-
-   HINT: no function required
+   1. Declare two variables and assign them values */
+let var1 = "Jorge"
+const var2 = "Musk"
+/*   2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable */
+if(var2 !== "Gonzalez") {
+    var1 = "Elon"
+}
+/*   3. Return the new value of the 1st variable */
+console.log(var1)
+/*   HINT: no function required
 */
 
 
@@ -39,12 +48,13 @@ Do the following:
 Task 1c - Convert Strings to Numbers
 
 Do the following:   
-   1. Declare a string type variable with the value of "1999"
-   2. Convert the string value of "1999" to a integer value of 1999
-   3. Return the result
-
-   HINT: look up the Number method
-*/
+   1. Declare a string type variable with the value of "1999" */
+let year = "1999"
+/*   2. Convert the string value of "1999" to a integer value of 1999 */
+year = parseInt(year)
+/*   3. Return the result */
+console.log(year)
+/*   HINT: look up the Number method */
 
 
 
@@ -53,13 +63,13 @@ Do the following:
 Task 1d - Multiply
  
 Do the following:   
-   1. Invoke the multiply function below and pass it two numbers
-   2. Receive the numbers in the parameters: a and b
-   3. Multiply a and b and return the answer
-*/
+/*   1. Invoke the multiply function below and pass it two numbers */
+multiply(5, 5)
+/*   2. Receive the numbers in the parameters: a and b */
+/*   3. Multiply a and b and return the answer */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(num1, num2){
+    return num1 * num2
   }
 
 
@@ -69,13 +79,12 @@ function multiply(/*add your code here*/){
 //Age in Dog years
 /*
 Do the following:
-   1. Invoke the dogYears function below and pass an age value to it
-   2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
-   3. Return the newly calculated age
-*/
+/*   1. Invoke the dogYears function below and pass an age value to it */ dogYears(5)
+/*   2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years) */
+/*   3. Return the newly calculated age */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age) {
+    return age * 7
 }
 
 
@@ -127,8 +136,8 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(userChoice){
+    let comChoice = Math.random()
 }
   
   
@@ -144,8 +153,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilo){
+    return kilo * .621371
   }
 
 
@@ -158,8 +167,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48
   }
  
 
@@ -173,9 +182,8 @@ Using the annoyingSong function below do the following:
   2. At each iteration, it should return this string: 
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
-
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(num){
+    return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num - 1} bottles of soda on the wall`
   }
 
 
@@ -194,11 +202,20 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+    if(score < 60) {
+      return "you got a F"
+    } else if(score >= 60 && score <= 69){
+      return "you got a D"
+    } else if(score >= 70 && score <=79) {
+      return "you got a C"
+    } else if(score >= 80 && score <= 89) {
+      return "you got a B"
+    } else if(score >= 90) {
+      return "you got a A"
+    }
   }
-  
-  
+
   
   
 
